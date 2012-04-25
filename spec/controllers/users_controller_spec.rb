@@ -324,7 +324,7 @@ describe UsersController do
             it "should protect the action" do
                 test_sign_in(@user)
                 delete :destroy, :id => @user
-                response.should redirect_to(root_path)
+                response.should redirect_to(users_path)
             end
         end
         ###

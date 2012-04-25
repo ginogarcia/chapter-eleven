@@ -17,6 +17,7 @@ class MicropostsController < ApplicationController
         redirect_to root_path, :flash => {:success => "Micropost deleted!"}
     end
     ###
+    
     private
         def authorized_user
             @micropost = Micropost.find(params[:id])
