@@ -13,7 +13,7 @@
   </td>
   <% if current_user?(feed_item.user) %>
       <td>
-          <%= link_to "delete", feed_item, :method => :delete,
+          <%= link_to "delete from feed_item", feed_item, :method => :delete,
                                            :confirmation => "You sure",
                                            :title => feed_item.content %>
       </td>
