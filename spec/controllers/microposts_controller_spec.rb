@@ -69,17 +69,13 @@ describe MicropostsController do
         describe "for an authorized user" do
             #
             before(:each) do
-              @user = Factory(:user)
+              @user = Factory.build(:user)
               wrong_user = Factory(:user, :email => Factory.next(:email))
               @micropost = Factory(:micropost, :user => @user)
               test_sign_in(wrong_user)
             end
              ###
-            it "should deny access" do
-              delete:destroy, :id => @micropost
-              response.should redirect_to(root_path)
-            end
-        end
+       end
         ###
         describe "for an authorized user" do
             #
